@@ -17,6 +17,7 @@
          and preg_match('/[A-Z]/', $password)
          and preg_match('/[a-z]/', $password)
          and preg_match('/[0-9]/', $password)
+          and preg_match('/[!@#$%^&*()]/', $password)
        ) {
       return true;  // Passed all tests
     } 

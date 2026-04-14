@@ -6,7 +6,8 @@ $data          = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {                            // If submitted
     $filters['email']                       = FILTER_VALIDATE_EMAIL;   // Email filter
     $filters['age']['filter']               = FILTER_VALIDATE_INT;     // Integer filter
-    $filters['age']['options']['min_range'] = 16;                      // Min age
+    $filters['age']['options']['min_range'] = 16;                       //Min age
+    $filters['age']['options']['max_range'] = 65;                    // Max age
     $filters['terms']                       = FILTER_VALIDATE_BOOLEAN; // Boolean filter
     $form = filter_input_array(INPUT_POST);                            // Get all values
     $data = filter_var_array($form, $filters);                         // Apply filters
