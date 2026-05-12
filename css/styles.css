@@ -1,3 +1,8 @@
+*{
+  position: relative;
+  display: block;
+}
+
 html, body {
   margin: 0;
   height: 100%;
@@ -71,6 +76,7 @@ h1 {
 
 form {
   text-align: right;
+  max-width: 50vw;
 }
 
 input {
@@ -103,4 +109,12 @@ input[type='submit']:hover {
 
 pre {
   text-align: left;
+  width: auto;           /* 고정 너비 해제 */
+  display: inline-block; /* 내용만큼만 너비 차지 */
+  max-width: 100%;
+  padding: 10px 20px;
+  overflow-x: auto;      /* scroll 대신 auto 사용 */
+  border: 1px solid white;
+  border-radius: 10px;   /* 20px은 너무 동그랄 수 있어 조절 */
+  background: rgba(255, 255, 255, 0.1);
 }
